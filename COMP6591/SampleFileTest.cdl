@@ -1,0 +1,9 @@
+# Datalog Sample Program
+#Rules:
+grand(X,Y):-father(Z,Y),father(X,Z,Y). 
+
+
+#Facts:
+father('a','b').
+
+father('b','c').

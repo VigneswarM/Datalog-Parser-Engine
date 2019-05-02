@@ -1,0 +1,24 @@
+# Datalog Sample Program
+#Rules:
+#grand(X,Y):-father(X,Z),father(Z,Y). 
+path(X,Y):-e(X,Y).
+
+path(X,Y):-path(X,Z),path(Z,Y).
+
+#Facts:
+#father('a','b').
+
+#father('b','c').
+
+
+
+e('1','2').
+
+e('2','3').
+
+e('1','3').
+
+
+
+
+

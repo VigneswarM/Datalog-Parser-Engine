@@ -1,0 +1,25 @@
+		// SAFETY RULE #4 : check if all Facts predicates free of variables
+		Collection<String> factParams = predicate.getValue().stream().filter(p -> p.getType().equals(Type.FACT))
+				.map(p -> p.getParameters()).flatMap(p -> p.stream()).collect(Collectors.toSet());
+		
+        Iterator<String> iterator = factParams.iterator();
+        
+        // while loop
+        while (iterator.hasNext()) {
+        	String str = iterator.next();
+        	str.toCharArray();
+        	char ch; int i =1;
+        	
+        	do{
+        		ch = str.charAt(1);
+        		if(ch>=65 && ch<=92){
+        			safetyErrorMsgs.add("Line " + paramsLinesNumber.get(RuleNb) + " | Rule #" + RuleNb
+        					+ " breaks the safety rules (No Variable Fact Paramater(s): " + ch + ")");
+        			System.out.println("Fact is not gorunded, contains Variable : " + ch);
+        			System.exit(5);
+        		}
+        		i++;
+        		
+        	}while(i==2);
+        System.out.println("value= " + iterator.next());
+        }

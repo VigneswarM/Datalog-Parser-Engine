@@ -1,0 +1,8 @@
+# Datalog Sample Program
+
+	pH(X,Y) :- e(X,Y), X<Z.
+	p(X,Y) :- e(X,Z), p(Z,Y).
+
+
+	e('a','b').
+	e('b','c').
